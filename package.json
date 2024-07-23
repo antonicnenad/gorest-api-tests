@@ -1,0 +1,16 @@
+{
+  "name": "api-tests",
+  "version": "1.0.0",
+  "description": "API tests for GoRest using Playwright",
+  "main": "api-tests.spec.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "allure:report": "allure generate ./allure-results --clean -o ./allure-report && allure open ./allure-report"
+  },
+  "author": "Nenad Antonic",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.45.3",
+    "allure-playwright": "^2.15.1"
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "authorization": "Bearer 93af244eea257f94f9a8d8a1011660ca7d231df824a330dfa21725c64233d147",
+    "newUser": {
+      "name": "John Doe",
+      "gender": "male",
+      "email": "john.doe@example.com",
+      "status": "active"
+    },
+    "updatedUser": {
+      "name": "John Doe Updated",
+      "email": "john.doe.updated@example.com",
+      "status": "inactive"
+    }
+  }
+  

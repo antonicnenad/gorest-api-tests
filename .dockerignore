@@ -1,0 +1,23 @@
+# Ignore node_modules directory
+node_modules
+
+# Ignore local environment variables
+.env
+
+# Ignore test results and reports
+playwright-report/
+test-results/
+allure-results/
+allure-report/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE configuration files
+.vscode/
+.idea/
+
+# Ignore npm debug log
+npm-debug.log
+yarn-error.log
