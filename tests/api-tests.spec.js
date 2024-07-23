@@ -1,7 +1,7 @@
 const { test, expect } = require("@playwright/test");
 const fs = require("fs");
 
-// Učitavanje podataka iz data.json
+// Load data from data.json
 const data = JSON.parse(fs.readFileSync("data.json", "utf-8"));
 
 test.describe("GoRest API Tests", () => {
@@ -26,14 +26,17 @@ test.describe("GoRest API Tests", () => {
       }
     );
 
+    // Log the response status and text
     console.log(
       `Create User Response: ${response.status()} ${await response.text()}`
     );
     expect(response.ok()).toBeTruthy();
 
+    // Parse and log the response body
     const responseBody = await response.json();
     console.log(`Response Body: ${JSON.stringify(responseBody)}`);
 
+    // Store the user ID for future tests
     userId = responseBody.id;
     expect(userId).toBeTruthy();
   });
@@ -56,11 +59,13 @@ test.describe("GoRest API Tests", () => {
       }
     );
 
+    // Log the response status and text
     console.log(
       `Update User Response: ${response.status()} ${await response.text()}`
     );
     expect(response.ok()).toBeTruthy();
 
+    // Parse and log the response body
     const responseBody = await response.json();
     console.log(`Response Body: ${JSON.stringify(responseBody)}`);
   });
@@ -77,6 +82,7 @@ test.describe("GoRest API Tests", () => {
       }
     );
 
+    // Log the response status and text
     console.log(
       `Delete User Response: ${response.status()} ${await response.text()}`
     );
